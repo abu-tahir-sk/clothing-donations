@@ -1,0 +1,23 @@
+[
+  {
+    "_id": 1,
+    "title": "Winter Closing Donation Camp",
+    "summary": "The Warm Winter Drive focuses on collecting and distributing jackets, sweaters, and blankets to underprivileged families. Every winter, thousands suffer without proper clothing. This campaign ensures they receive warmth and dignity. With community support, we aim to reach rural villages and urban homeless shelters to protect lives during harsh weather.",
+    "mission": "To provide warmth and comfort to those in need during harsh winters.",
+    "goals": [
+      "Collect 5000 warm clothes",
+      "Distribute to 10 rural villages",
+      "Raise awareness about winter struggles of homeless families"
+    ],
+    "how_to_contribute": "You can support by donating clothes, funds, or volunteering in distribution programs.",
+    "monetary_contributions": "Contribute funds online via our secure donation portal.",
+    "donate_winter_clothing": "Drop off jackets, sweaters, and blankets at our collection centers.",
+    "volunteer_with_us": "Sign up to help with packaging and distribution across villages and shelters.",
+    "image": "https://i.ibb.co/WNRhKT8K/Untitled-design-3.png",
+    "contact": {
+      "email": "winterdrive@clothingaid.org",
+      "phone": "+91-9876543210"
+    },
+    "last_updated": "2025-09-21"
+  }
+]

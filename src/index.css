@@ -1,3 +1,15 @@
+@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&display=swap');
+
+
+.font-family {
+  font-family: "Lora", serif;;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); filter: brightness(50%); }
+  to   { opacity: 1; transform: translateY(0); filter: brightness(100%); }
+}
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;

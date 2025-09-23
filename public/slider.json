@@ -1,0 +1,69 @@
+[
+  {
+    "id": 1,
+    "title": "Winter Clothing Drive",
+    "image": "https://i.ibb.co/JjM7K8BV/Winter-Clothing-Drive.png",
+    "description": "Donate your unused warm clothes to help children and families stay warm during the cold season.",
+    "status": "Ongoing",
+    "contactInfo": "contact@donation.org | +880123456789",
+    "division": "Dhaka",
+    "buttonText": "Donate Now",
+    "buttonUrl": "/projects/1"
+  },
+  {
+    "id": 2,
+    "title": "Food Relief Program",
+    "image": "https://i.ibb.co/Z9T47q7/Food-Relief-Program.jpg",
+    "description": "Providing daily food packages for homeless people and families struggling with hunger.",
+    "status": "Upcoming",
+    "contactInfo": "foodrelief@donation.org | +880987654321",
+    "division": "Chattogram",
+    "buttonText": "Learn More",
+    "buttonUrl": "/projects/2"
+  },
+  {
+    "id": 3,
+    "title": "School Supplies Donation",
+    "image": "https://i.ibb.co/VWwCnkyx/School-Supplies-Donation.jpg",
+    "description": "Help underprivileged children get notebooks, pens, and school bags to continue their education.",
+    "status": "Ongoing",
+    "contactInfo": "school@donation.org | +8801122334455",
+    "division": "Rajshahi",
+    "buttonText": "Support Children",
+    "buttonUrl": "/projects/3"
+  },
+  {
+    "id": 4,
+    "title": "Medical Aid Camp",
+    "image": "https://i.ibb.co/m55LRhGr/Medical-Aid-Camp.jpg",
+    "description": "Offering free health check-ups, medicines, and awareness sessions for rural communities.",
+    "status": "Completed",
+    "contactInfo": "health@donation.org | +8802233445566",
+    "division": "Khulna",
+    "buttonText": "View Report",
+    "buttonUrl": "/projects/4"
+  },
+  {
+    "id": 5,
+    "title": "Flood Relief Campaign",
+    "image": "https://i.ibb.co/pBt1tvmX/Flood-Relief-Campaign.jpg",
+    "description": "Supporting families affected by floods with food, clean water, and temporary shelters.",
+    "status": "Ongoing",
+    "contactInfo": "flood@donation.org | +8803344556677",
+    "division": "Sylhet",
+    "buttonText": "Help Now",
+    "buttonUrl": "/projects/5"
+  },
+  {
+    "id": 6,
+    "title": "Orphanage Support",
+    "image": "https://i.ibb.co/ZRn2vx5V/Orphanage-Support.jpg",
+    "description": "Providing clothes, books, and toys to children living in orphanages across the country.",
+    "status": "Upcoming",
+    "contactInfo": "orphan@donation.org | +8804455667788",
+    "division": "Barishal",
+    "buttonText": "Join Us",
+    "buttonUrl": "/projects/6"
+  }
+]
+

@@ -1,3 +1,3 @@
 # Clothing Donation
 
-https://clothinf-donation.firebaseapp.com/
+https://clothing-donation-34ewr.web.app/

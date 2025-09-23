@@ -1,0 +1,58 @@
+[
+  {
+    "__id": 1,
+    "title": "Sign Up",
+    "description": "Create a free account to start donating clothes and track your contributions.",
+    "icon": "https://img.icons8.com/ios-filled/100/000000/add-user-male.png",
+    "order": 1
+  },
+  {
+    "__id": 2,
+    "title": "Choose Clothes",
+    "description": "Select clean, gently used clothes from your wardrobe for donation.",
+    "icon": "https://img.icons8.com/ios-filled/100/000000/t-shirt.png",
+    "order": 2
+  },
+  {
+    "__id": 3,
+    "title": "Check Guidelines",
+    "description": "Review our donation guidelines to ensure the items meet quality standards.",
+    "icon": "https://img.icons8.com/ios-filled/100/000000/rules.png",
+    "order": 3
+  },
+  {
+    "__id": 4,
+    "title": "Schedule Pickup or Drop-off",
+    "description": "Book a pickup from your home or drop off at a nearby donation center.",
+    "icon": "https://img.icons8.com/ios-filled/100/000000/calendar.png",
+    "order": 4
+  },
+  {
+    "__id": 5,
+    "title": "Packaging",
+    "description": "Neatly pack your clothes in a bag or box for easy handling.",
+    "icon": "https://img.icons8.com/ios-filled/100/000000/box.png",
+    "order": 5
+  },
+  {
+    "__id": 6,
+    "title": "Sorting",
+    "description": "Our volunteers sort the clothes by type, size, and season for distribution.",
+    "icon": "https://img.icons8.com/ios-filled/100/000000/sorting-options.png",
+    "order": 6
+  },
+  {
+    "__id": 7,
+    "title": "Distribution",
+    "description": "Clothes are delivered to orphanages, shelters, and families in need.",
+    "icon": "https://img.icons8.com/ios-filled/100/000000/delivery.png",
+    "order": 7
+  },
+  {
+    "__id": 8,
+    "title": "See Impact",
+    "description": "Receive updates on how your donated clothes made a real difference.",
+    "icon": "https://img.icons8.com/ios-filled/100/000000/like.png",
+    "order": 8
+  }
+]
