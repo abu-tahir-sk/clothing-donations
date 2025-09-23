@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import Marquee from "react-fast-marquee";
 
 const Testimonials = () => {
   const [testimonials, setTestimonials] = useState([]);
@@ -8,7 +9,8 @@ const Testimonials = () => {
       .then((data) => setTestimonials(data));
   }, []);
   return (
-    <div className="my-10 flex gap-6">
+    <Marquee className="bg-gray-50 my-10" >
+     <div className=" flex gap-6">
       {testimonials.map((t) => (
         <div
           key={t.id}
@@ -28,6 +30,7 @@ const Testimonials = () => {
         Read Success Stories →
       </button>
     </div>
+    </Marquee>
   );
 };
 
