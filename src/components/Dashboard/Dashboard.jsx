@@ -1,11 +1,11 @@
-// import Profile from "../Profile/Profile";
+import Profile from "../Profile/Profile";
 
-// const Dashboard = () => {
-//       return (
-//             <div>
-//                   <Profile></Profile>
-//             </div>
-//       );
-// };
+const Dashboard = () => {
+      return (
+            <div>
+                  <Profile></Profile>
+            </div>
+      );
+};
 
-// export default Dashboard;
+export default Dashboard;
