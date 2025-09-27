@@ -9,28 +9,30 @@ const Testimonials = () => {
       .then((data) => setTestimonials(data));
   }, []);
   return (
-    <Marquee className="bg-gray-50 my-10" >
-     <div className=" flex gap-6">
-      {testimonials.map((t) => (
-        <div
-          key={t.id}
-          className="flex flex-col items-center  shadow hover:scale-105 transition "
-        >
-          <div className="w-44 h-full">
-            <img src={t.image} alt={t.name} className="w-full h-full" />
+   <>
+    <Marquee speed={100} pauseOnHover={true} className="bg-gray-50 mt-10 space-x-4">
+      <div className=" flex gap-4">
+        {testimonials.map((t) => (
+          <div
+            key={t.id}
+            className="flex flex-col items-center  shadow hover:scale-105 transition "
+          >
+            <div className="w-44 h-full">
+              <img src={t.image} alt={t.name} className="w-full h-full" />
+            </div>
+            <div className="p-4">
+              <h3 className="font-semibold">{t.name}</h3>
+              <p className="text-sm text-gray-500">{t.role}</p>
+            </div>
           </div>
-          <div className="p-4">
-            <h3 className="font-semibold">{t.name}</h3>
-            <p className="text-sm text-gray-500">{t.role}</p>
-          </div>
-        </div>
-      ))}
-
-      <button className="mt-10 px-6 py-3 bg-black text-white rounded-full shadow hover:bg-gray-800 transition">
+        ))}
+      </div>
+    </Marquee>
+     <button className="px-6 ml-2 py-3 bg-cyan-600 text-white rounded-full shadow hover:bg-gray-700 transition">
         Read Success Stories →
       </button>
-    </div>
-    </Marquee>
+   </>
+    
   );
 };
 

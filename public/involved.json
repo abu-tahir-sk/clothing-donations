@@ -1,0 +1,24 @@
+[
+  {
+    "title": "Volunteer",
+    "description": "Your small step can bring warmth to someone’s life this winter. Become a volunteer, donate clothes, or spread the word.",
+    "img": "https://i.ibb.co/QFQNp2JV/img3.jpg",
+    "options": [
+      {
+        "subtitle": "Donate Clothes",
+        "icon": "🧥",
+        "subdescription": "Share your unused winter clothes with people in need. Every coat counts!"
+      },
+      {
+        "subtitle": "Become a Volunteer",
+        "icon": "🤝",
+        "subdescription": "Help us collect, organize, and distribute donations to communities."
+      },
+      {
+        "subtitle": "Spread the Word",
+        "icon": "📢",
+        "subdescription": "Share our campaign with friends and family. Inspire more heroes this winter."
+      }
+    ]
+  }
+]

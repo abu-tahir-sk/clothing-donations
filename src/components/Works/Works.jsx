@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { Link, } from "react-router-dom";
 
 const Works = () => {
   const [works, setWorks] = useState([]);
@@ -9,13 +10,19 @@ const Works = () => {
   }, []);
   return (
     <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-8 my-12 p-4 bg-gray-50">
-      {works.map((work) => (
-        <div className="overflow-hidden transform transition duration-300 hover:scale-105 hover:shadow-2xl flex flex-col gap-3 text-center items-center p-6 bg-white rounded-xl shadow-md" key={work.__id}>
-            <img className="w-16 h-16" src={work.icon} alt="" />
+    
+        {works.map((work) => (
+          <div
+            className="overflow-hidden transform transition duration-300 hover:scale-105 hover:shadow-2xl flex flex-col gap-3 text-center items-center p-6 bg-white rounded-xl shadow-md"
+            key={work.__id}
+          >  <Link to="/help">
+            <img className="w-16 h-16 hover:scale-105" src={work.icon} alt="" />
+            </Link>
             <h5 className=" font-bold">{work.title}</h5>
             <p className="text-gray-600">{work.description}</p>
-        </div>
-      ))}
+          </div>
+        ))}
+      
     </div>
   );
 };
