@@ -8,8 +8,8 @@ import Login from "./components/Login/Login";
 import Register from "./components/Register/Register";
 import Dashboard from "./components/Dashboard/Dashboard";
 import PrivateRouts from "./Routs/PrivateRouts";
-import Profile from "./components/Profile/Profile";
 import UpdateProfile from "./components/UpdateProfile/UpdateProfile";
+import Details from "./components/Details/Details";
 
 const router = createBrowserRouter([
   {
@@ -23,6 +23,26 @@ const router = createBrowserRouter([
       {
         path: "/campaigns",
         element: <Campaigns></Campaigns>,
+        loader: () => fetch("/campaigns.json"),
+      },
+      {
+        path: "/details/:id",
+        element: (
+          <PrivateRouts>
+            <Details></Details>
+          </PrivateRouts>
+        ),
+        loader: async ({ params }) => {
+          console.log(params)
+          const res = await fetch("/campaigns.json");
+          const data = await res.json();
+          const singleData = data.find(
+            (item => item.id === parseInt(params.id))
+          );
+          console.log(singleData)
+          return singleData;
+        
+        },
       },
       {
         path: "/help",
@@ -30,30 +50,37 @@ const router = createBrowserRouter([
       },
       {
         path: "/dashboard",
-        element: <PrivateRouts><Dashboard></Dashboard></PrivateRouts>,
+        element: (
+          <PrivateRouts>
+            <Dashboard></Dashboard>
+          </PrivateRouts>
+        ),
       },
       {
-        path:"/login",
-        element:<Login></Login>
+        path: "/login",
+        element: <Login></Login>,
       },
       {
-        path:"/register",
-        element:<Register></Register>
+        path: "/register",
+        element: <Register></Register>,
       },
-      
+
       {
-        path: '/updateProfile',
-        element:<PrivateRouts> <UpdateProfile></UpdateProfile></PrivateRouts>
+        path: "/updateProfile",
+        element: (
+          <PrivateRouts>
+            {" "}
+            <UpdateProfile></UpdateProfile>
+          </PrivateRouts>
+        ),
       },
-      
-    {
+
+      {
         path: "*",
         element: <ErrorPage></ErrorPage>,
       },
     ],
   },
-  
-    
 ]);
 
 export default router;

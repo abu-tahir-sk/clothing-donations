@@ -5,7 +5,9 @@
     "image": "https://images.unsplash.com/photo-1618886614637-dc9395e6a4fb",
     "description": "Provide warm jackets, blankets, and sweaters to homeless families enduring freezing nights. Your donation ensures dignity, comfort, and survival for those with no shelter this winter.",
     "division": "Delhi",
-    "donate_link": "/campaigns/1"
+    "donate_link": "/campaigns/1",
+    "status": "Active",
+    "contact": " +91-9876543210"
   },
   {
     "id": 2,
@@ -13,7 +15,9 @@
     "image": "https://images.unsplash.com/photo-1588072432836-e10032774350",
     "description": "Help children from low-income families access school with proper uniforms and shoes. Your donation fosters dignity, confidence, and ensures they attend classes without facing discrimination.",
     "division": "Mumbai",
-    "donate_link": "/campaigns/2"
+    "donate_link": "/campaigns/2",
+    "status": "Active",
+    "contact": " +91-9123456780"
   },
   {
     "id": 3,
@@ -21,7 +25,9 @@
     "image": "https://images.unsplash.com/photo-1605902711622-cfb43c44367f",
     "description": "Flood-affected families lost everything. By donating essential clothes, you help them restore dignity, protect against weather, and rebuild their lives with strength and community support.",
     "division": "Assam",
-    "donate_link": "/campaigns/3"
+    "donate_link": "/campaigns/3",
+    "status": "Active",
+    "contact": " +91-9988776655"
   },
   {
     "id": 4,
@@ -29,7 +35,9 @@
     "image": "https://images.unsplash.com/photo-1584467735871-bb6c4b8a9eae",
     "description": "Elderly citizens often struggle in cold winters without proper clothing. Donate warm shawls and essentials to bring comfort, health, and dignity to their vulnerable lives.",
     "division": "Kolkata",
-    "donate_link": "/campaigns/4"
+    "donate_link": "/campaigns/4",
+    "status": "Completed",
+    "contact": " +91-9090909090"
   },
   {
     "id": 5,
@@ -37,7 +45,9 @@
     "image": "https://images.unsplash.com/photo-1520975698519-59c09a8b3f1f",
     "description": "Underprivileged families in slums face extreme summer heat without proper clothes. Donate lightweight cotton wear and slippers to ensure comfort, safety, and relief during hot months.",
     "division": "Chennai",
-    "donate_link": "/campaigns/5"
+    "donate_link": "/campaigns/5",
+    "status": "Active",
+    "contact": " +91-8888444477"
   },
   {
     "id": 6,
@@ -45,7 +55,9 @@
     "image": "https://images.unsplash.com/photo-1519681393784-d120267933ba",
     "description": "Orphanage children lack everyday clothing, sweaters, and shoes. Your donation brings them comfort, warmth, and confidence to enjoy childhood with hope, security, and better opportunities.",
     "division": "Hyderabad",
-    "donate_link": "/campaigns/6"
+    "donate_link": "/campaigns/6",
+    "status": "Active",
+    "contact": " +91-7000123456"
   },
   {
     "id": 7,
@@ -53,7 +65,9 @@
     "image": "https://images.unsplash.com/photo-1559070154-6c0b4b6a8f77",
     "description": "Remote villagers endure harsh winters without basic protection. Your contribution of blankets and warm clothes will shield them from cold and improve health, dignity, and safety.",
     "division": "Shimla",
-    "donate_link": "/campaigns/7"
+    "donate_link": "/campaigns/7",
+    "status": "Completed",
+    "contact": " +91-7333444555"
   },
   {
     "id": 8,
@@ -61,7 +75,9 @@
     "image": "https://images.unsplash.com/photo-1581091215360-15a529f0e7e0",
     "description": "Refugee families often flee with nothing. By donating clothes, you give them essentials, dignity, and comfort, helping rebuild lives after displacement and unimaginable hardships they face.",
     "division": "Lucknow",
-    "donate_link": "/campaigns/8"
+    "donate_link": "/campaigns/8",
+    "status": "Active",
+    "contact": " +91-7555666777"
   },
   {
     "id": 9,
@@ -69,7 +85,9 @@
     "image": "https://images.unsplash.com/photo-1542291026-7eec264c27ff",
     "description": "Children walk barefoot daily, risking injuries and infections. Your donation of shoes and socks ensures protection, comfort, and dignity, enabling them to attend school safely.",
     "division": "Bengaluru",
-    "donate_link": "/campaigns/9"
+    "donate_link": "/campaigns/9",
+    "status": "Active",
+    "contact": " +91-7666777888"
   },
   {
     "id": 10,
@@ -77,7 +95,9 @@
     "image": "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c",
     "description": "Street children face freezing nights without proper clothing. Donate winter jackets to protect them from cold, illness, and hardship, ensuring survival, warmth, and hope for tomorrow.",
     "division": "Jaipur",
-    "donate_link": "/campaigns/10"
+    "donate_link": "/campaigns/10",
+    "status": "Active",
+    "contact": " +91-7999888777"
   },
   {
     "id": 11,
@@ -85,7 +105,9 @@
     "image": "https://images.unsplash.com/photo-1581515289770-1c1d3a1e0c17",
     "description": "Daily wage workers often wear torn clothing at work. Donate uniforms and protective wear to improve dignity, safety, and their ability to work confidently with pride.",
     "division": "Pune",
-    "donate_link": "/campaigns/11"
+    "donate_link": "/campaigns/11",
+    "status": "Active",
+    "contact": " +91-8111222333"
   },
   {
     "id": 12,
@@ -93,6 +115,8 @@
     "image": "https://images.unsplash.com/photo-1605902711622-cfb43c44367f",
     "description": "Newborns in poor families lack essentials. By donating baby clothes and blankets, you ensure warmth, comfort, and safety for infants, supporting healthier beginnings for vulnerable lives.",
     "division": "Varanasi",
-    "donate_link": "/campaigns/12"
+    "donate_link": "/campaigns/12",
+    "status": "Active",
+    "contact": " +91-8222333444"
   }
 ]

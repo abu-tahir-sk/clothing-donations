@@ -9,7 +9,7 @@ const Main = () => {
 
       <div className="h-32 lg:h-32"></div>
 
-      <main className="flex-1">
+      <main className="flex-1" data-aos="fade-up">
         <Outlet />
       </main>
 

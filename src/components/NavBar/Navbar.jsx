@@ -94,7 +94,7 @@ const Navbar = () => {
         )}
       </ul>
 
-      <div className="relative">
+      <div className="relative flex justify-center items-center gap-3">
         {user ? (
           <div>
             <button
@@ -123,7 +123,7 @@ const Navbar = () => {
                     }`
                   }
                 >
-                  {" "}
+                 
                   <FaUser></FaUser> Profile
                 </NavLink>
 

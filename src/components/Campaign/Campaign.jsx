@@ -1,9 +1,10 @@
 
 import { LuArrowRightToLine } from "react-icons/lu";
 import { FaLocationDot } from "react-icons/fa6";
+import { Link } from "react-router-dom";
 
 const Campaign = ({ campaign }) => {
-  const { title,image,division, description } = campaign;
+  const { title,image,division, description,id } = campaign;
   return (
     <div className="card bg-base-100  shadow-md border-2 border-[#b9b9b9]">
      <div className="p-6">
@@ -24,9 +25,9 @@ const Campaign = ({ campaign }) => {
             <h3 className="font-bold text-[#7A7A7A]"> {division}</h3>
         </div>
         <div className="card-actions justify-start">
-          <button className="btn bg-cyan-600 hover:bg-gray-700 text-white hover:border-4">
+          <Link to={`/details/${campaign.id}`} className="btn bg-cyan-600 hover:bg-gray-700 text-white hover:border-4">
             Donate Now <LuArrowRightToLine></LuArrowRightToLine>
-          </button>
+          </Link>
         </div>
       </div>
     </div>

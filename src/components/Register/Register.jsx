@@ -57,7 +57,7 @@ const Register = () => {
     } else {
       registerHandler(email, password)
         .then((result) => {
-         
+           login("user@example.com");
           console.log(result)
           
           emailVerification()

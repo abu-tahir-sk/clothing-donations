@@ -11,6 +11,8 @@ import {
 } from "firebase/auth";
 import { createContext, useEffect, useState } from "react";
 import auth from "../firebase/firebase.config";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 // eslint-disable-next-line react-refresh/only-export-components
 export const AuthContext = createContext(null);
@@ -40,7 +42,7 @@ const AuthProvider = ({ children }) => {
     return sendEmailVerification(auth.currentUser);
   };
   const profileUpdate = (profile) => {
-    return updateProfile(auth.currentUser,profile);
+    return updateProfile(auth.currentUser, profile);
   };
   const passwordResetEmail = (email) => {
     return sendPasswordResetEmail(auth, email);
@@ -56,7 +58,7 @@ const AuthProvider = ({ children }) => {
     setUser,
     emailVerification,
     passwordResetEmail,
-    profileUpdate
+    profileUpdate,
   };
   useEffect(() => {
     const unsubscribe = onAuthStateChanged(auth, (currentUser) => {
@@ -65,6 +67,12 @@ const AuthProvider = ({ children }) => {
       return () => {
         unsubscribe();
       };
+    });
+  }, []);
+  useEffect(() => {
+    AOS.init({
+      duration: 1000,
+      once: true,
     });
   }, []);
   return (
