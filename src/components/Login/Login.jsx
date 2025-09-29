@@ -20,7 +20,7 @@ const Login = () => {
     password: "",
     email: "",
   });
-  const emailRef = useRef();
+  
 
   const handleLoginSubmit = (e) => {
     let newErrors = { terms: "", password: "", email: "" };
@@ -80,19 +80,7 @@ const Login = () => {
         });
       });
   };
-  const handleForgot = () => {
-    const email = emailRef.current.value;
-    if (!email) {
-      alert("Please provide a valid email");
-      return;
-    } else {
-      passwordResetEmail(email)
-        .then(() => {
-          alert("Password Reset email sent, pleas check your email");
-        })
-        .catch((err) => alert(err));
-    }
-  };
+ 
   return (
     <div className="bg-gray-200 p-4">
       <div className="grid grid-cols-1 md:grid-cols-12 gap-0 w-11/12 md:w-9/12  mx-auto my-4 rounded">
@@ -117,7 +105,7 @@ const Login = () => {
                   <label className="label py-2 text-xl">Email</label>
                   <input
                     type="email"
-                    ref={emailRef}
+                    
                     name="email"
                     className="border-2 py-4 px-12  w-full  h-12 focus:outline-none  focus:ring-blue-200 focus:border-blue-200"
                     placeholder="Email"
@@ -164,9 +152,9 @@ const Login = () => {
                     <h2 className="text-cyan-600 lg:font-bold">Remember me</h2>
                   </div>
 
-                  <a className="link link-hover" onClick={handleForgot}>
+                  <Link to="/forgatPassword" className="link link-hover" >
                     Forgot password?
-                  </a>
+                  </Link>
                 </div>
                 {errors.terms && (
                   <p className="text-red-500 text-center">{errors.terms}</p>

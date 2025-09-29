@@ -17,6 +17,7 @@ const Details = () => {
 
       if (!quantity || !selectItem || !location) {
         alert("Please fill required fields!");
+         e.target.reset();
         return;
       }
 
@@ -34,7 +35,7 @@ const Details = () => {
       saveData.push(info);
       localStorage.setItem("donate", JSON.stringify(saveData));
       setIsOpen(true);
-   
+       e.target.reset();
   };
 
   return (

@@ -10,6 +10,7 @@ import Dashboard from "./components/Dashboard/Dashboard";
 import PrivateRouts from "./Routs/PrivateRouts";
 import UpdateProfile from "./components/UpdateProfile/UpdateProfile";
 import Details from "./components/Details/Details";
+import ForgatPassword from "./components/ForgatPassword/ForgatPassword";
 
 const router = createBrowserRouter([
   {
@@ -33,15 +34,14 @@ const router = createBrowserRouter([
           </PrivateRouts>
         ),
         loader: async ({ params }) => {
-          console.log(params)
+          console.log(params);
           const res = await fetch("/campaigns.json");
           const data = await res.json();
           const singleData = data.find(
-            (item => item.id === parseInt(params.id))
+            (item) => item.id === parseInt(params.id)
           );
-          console.log(singleData)
+          console.log(singleData);
           return singleData;
-        
         },
       },
       {
@@ -73,6 +73,10 @@ const router = createBrowserRouter([
             <UpdateProfile></UpdateProfile>
           </PrivateRouts>
         ),
+      },
+      {
+        path: "/forgatPassword",
+        element: <ForgatPassword></ForgatPassword>,
       },
 
       {
