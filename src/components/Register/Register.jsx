@@ -105,7 +105,7 @@ const Register = () => {
                 type="text"
                 placeholder="Name"
                 name="name"
-                className="input input-bordered"
+                className="border-2 py-4 px-12  w-full  h-12 focus:outline-none  focus:ring-blue-200 focus:border-blue-200"
                 required
               />
             </div>
@@ -117,7 +117,7 @@ const Register = () => {
                 type="email"
                 placeholder="email"
                 name="email"
-                className="input "
+                className="border-2 py-4 px-12  w-full  h-12 focus:outline-none  focus:ring-blue-200 focus:border-blue-200"
                 required
               />
             </div>
@@ -129,7 +129,7 @@ const Register = () => {
                 type="url"
                 placeholder="Enter the URL of your photo"
                 name="photoUrl"
-                className="input input-bordered"
+                className="border-2 py-4 px-12  w-full  h-12 focus:outline-none  focus:ring-blue-200 focus:border-blue-200"
                 required
               />
             </div>
@@ -141,12 +141,12 @@ const Register = () => {
                 type={showPassword ? "text" : "password"}
                 placeholder="password"
                 name="password"
-                className="input input-bordered"
+                className="border-2 py-4 px-12  w-full  h-12 focus:outline-none  focus:ring-blue-200 focus:border-blue-200"
                 required
               />
               <button
                 onClick={() => setShowPassword(!showPassword)}
-                className="absolute top-8 right-8"
+                className="absolute  top-10 right-4 -translate-t-12 text-[26px] cursor-pointer "
               >
                 {showPassword ? (
                   <IoEye></IoEye>

@@ -1,11 +1,14 @@
 import { Link, useNavigate } from "react-router-dom";
 import { GiValley } from "react-icons/gi";
-import login from "../../assets/image/logins.jfif";
+import login from "../../assets/image/login.jfif";
 import google from "../../assets/image/ggg-removebg-preview.png";
 import { useContext, useRef, useState } from "react";
 import { AuthContext } from "../AuthProvider/AuthProvider";
 import { IoEye, IoEyeOffSharp } from "react-icons/io5";
 import { toast } from "react-toastify";
+import { IoMdMail } from "react-icons/io";
+import { IoKey } from "react-icons/io5";
+
 const Login = () => {
   const { loginHandler, handleGoogleLogin, passwordResetEmail } =
     useContext(AuthContext);
@@ -92,11 +95,11 @@ const Login = () => {
   };
   return (
     <div className="bg-gray-200 p-4">
-      <div className="grid grid-cols-1 md:grid-cols-12 gap-0 w-11/12  mx-auto my-6">
-       <div className="hidden md:flex flex-col    md:order-last md:col-span-5 items-center rounded-none">
-            <img className="w-full h-full" src={login} alt="" />
+      <div className="grid grid-cols-1 md:grid-cols-12 gap-0 w-11/12 md:w-9/12  mx-auto my-4 rounded">
+       <div className="hidden md:flex flex-col    md:order-last md:col-span-5 items-center  bg-white   shadow-2xl ">
+            <img className="w-full rounded h-full" src={login} alt="" />
           </div>
-          <div className="lg:relative flex-1 md:flex items-center card bg-white  shadow-2xl rounded-md md:rounded-none p-4 md:col-span-7">
+          <div className="lg:relative flex-1 md:flex items-center card bg-white  shadow-2xl rounded-md  p-4 md:col-span-7">
             <div className="">
               <div className="">
                 <div className="text-5xl text-cyan-500 pb-3">
@@ -110,29 +113,33 @@ const Login = () => {
                 </p>
               </div>
               <form onSubmit={handleLoginSubmit} className="form-control">
-                <div className="flex flex-col form-control">
+                <div className="flex flex-col form-control relative">
                   <label className="label py-2 text-xl">Email</label>
                   <input
                     type="email"
                     ref={emailRef}
                     name="email"
-                    className="input input-bordered w-full"
+                    className="border-2 py-4 px-12  w-full  h-12 focus:outline-none  focus:ring-blue-200 focus:border-blue-200"
                     placeholder="Email"
                     required
                   />
+                  <button className="absolute  top-[58px] left-4  text-xl cursor-pointer text-gray-500">
+                    <IoMdMail />
+                  </button>
                 </div>
                 <div className="form-control flex flex-col relative">
                   <label className="label text-xl py-2 ">Password</label>
+                 
                   <input
                     type={showPassword ? "text" : "password"}
                     name="password"
-                    className="input w-full input-bordered"
+                    className="border-2 py-4 px-12  w-full  h-12 focus:outline-none  focus:ring-blue-200 focus:border-blue-200"
                     placeholder="Password"
-                    required
+                    required                    
                   />
-                  <button
+                   <button
                     onClick={() => setShowPassword(!showPassword)}
-                    className="absolute top-14 right-4"
+                    className="absolute  top-14 right-4 -translate-t-12 text-[26px] cursor-pointer "
                   >
                     {showPassword ? (
                       <IoEye></IoEye>
@@ -140,9 +147,15 @@ const Login = () => {
                       <IoEyeOffSharp></IoEyeOffSharp>
                     )}
                   </button>
+                   <button
+                    
+                    className="absolute  top-14 left-4 -translate-t-12 text-xl cursor-pointer text-gray-500"
+                  >
+                   <IoKey />
+                  </button>
                 </div>
                 <div className="flex justify-between py-2">
-                  <div className="flex justify-center gap-1">
+                  <div className="flex justify-center gap-1 py-2">
                     <input
                       type="checkbox"
                       name="terms"
@@ -185,7 +198,7 @@ const Login = () => {
                 <p className="py-3">
                   Don't have an account
                   <Link className="text-green-500 pl-1" to="/register">
-                    sign up.
+                    Register.
                   </Link>
                 </p>
               </div>
