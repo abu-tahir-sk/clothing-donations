@@ -80,9 +80,11 @@ const Register = () => {
         })
         
         .catch((error) => {
+
           newErrors.error = error.message;
           setErrors(newErrors);
           setSuccess(false);
+          e.target.reset();
         });
     }
   };

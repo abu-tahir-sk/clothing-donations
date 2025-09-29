@@ -34,16 +34,16 @@ const Banner = () => {
       >
         {slider.map((slide) => (
           <SwiperSlide key={slide.id}>
-            <div className="relative w-full h-[400px]">
+            <div className="relative w-full h-[70vh]">
               <img
-                className="w-full h-full object-cover"
+                className="w-full  object-cover"
                 src={slide.image}
                 alt={slide.title}
               />
               <div className="absolute inset-0 bg-black bg-opacity-40 flex flex-col justify-center items-center text-center text-white p-6">
                 <h2 className="text-3xl font-bold mb-2">{slide.title}</h2>
                 <p className="max-w-xl pb-3">{slide.description}</p>
-                <button className="btn bg-cyan-600 border-none">{slide.buttonText}</button>
+                <button className="btn bg-cyan-600 border-none hover:bg-gray-800 hover:rounded hover:text-white hover:px-6 hover:p-2">{slide.buttonText}</button>
               </div>
             </div>
           </SwiperSlide>

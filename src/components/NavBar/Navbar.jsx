@@ -1,6 +1,5 @@
 import { Link, NavLink } from "react-router-dom";
 import logo from "../../assets/image/dontion.jpg";
-
 import { RiMenu2Line } from "react-icons/ri";
 import { useContext, useState } from "react";
 import { IoClose, IoSettingsSharp } from "react-icons/io5";
@@ -13,6 +12,7 @@ const Navbar = () => {
   const [openUser, setOpenUser] = useState(false);
   const { user, logOutHandler } = useContext(AuthContext);
   const [success, setSuccess] = useState(false);
+  
   const HandleLogOUt = () => {
     setSuccess(false);
     logOutHandler()
@@ -25,28 +25,28 @@ const Navbar = () => {
   };
 
   return (
-    <div className="flex justify-between items-center py-8 px-6 lg:px-10 shadow-sm fixed top-0 left-0 w-full bg-white z-50">
+    <div className="flex justify-between items-center  p-4 lg:px-10 shadow-sm fixed top-0 left-0 w-full bg-white z-50">
       <div className="md:flex gap-2 justify-center items-center">
-        <img className="w-16 h-12" src={logo} alt="" />
+        <img className="w-12 h-12" src={logo} alt="" />
         <h2 className="font-extrabold text-2xl">
           <span className="text-cyan-600 md:text-wrap">CLOTH</span> For All
         </h2>
       </div>
 
       <ul
-        className={`lg:flex mt-2 gap-4 justify-center text-gray-700  
-  p-10 md:p-8 lg:p-0 absolute duration-1000
+        className={`flex flex-col lg:lg:flex-row  gap-6 lg:gap-8 justify-start lg:justify-center lg:items-center text-gray-700  
+  p-2  lg:p-0 absolute lg:static duration-1000
   ${open ? "right-0 bg-white" : "-right-full"}
-  lg:static top-24 py-3  shadow-2xl lg:shadow-none
-  h-[100vh] md:h-[100vh] w-[35%] md:w-[35%] lg:w-full lg:h-12`}
+   top-[81px] py-3  shadow-2xl lg:shadow-none
+  h-[100vh]  md:h-[100vh] w-[70%] md:w-[35%] lg:w-full lg:h-12`}
       >
         <li className="">
           <NavLink
-            className={({ isActive }) =>
-              isActive
-                ? "text-white bg-cyan-600 btn font-bold"
-                : "text-gray-700"
-            }
+           className={({ isActive }) =>
+                  `hover:bg-gray-800 hover:rounded hover:text-white hover:px-6 hover:p-2 ${isActive
+                    ? "text-white bg-cyan-600 rounded px-6 p-2  font-bold"
+                    : "text-gray-700"
+                }`}
             to="/"
           >
             Home
@@ -55,10 +55,10 @@ const Navbar = () => {
         <li>
           <NavLink
             className={({ isActive }) =>
-              isActive
-                ? "text-white bg-cyan-600 btn font-bold"
-                : "text-gray-700"
-            }
+                  `hover:bg-gray-800 hover:rounded hover:text-white hover:px-6 hover:p-2 ${isActive
+                    ? "text-white bg-cyan-600 rounded px-6 p-2  font-bold"
+                    : "text-gray-700"
+                }`}
             to="/campaigns"
           >
             Donation Campaigns
@@ -66,11 +66,11 @@ const Navbar = () => {
         </li>
         <li>
           <NavLink
-            className={({ isActive }) =>
-              isActive
-                ? "text-white bg-cyan-600 btn font-bold"
-                : "text-gray-700"
-            }
+             className={({ isActive }) =>
+                  `hover:bg-gray-800 hover:rounded hover:text-white hover:px-6 hover:p-2 ${isActive
+                    ? "text-white bg-cyan-600 rounded px-6 p-2  font-bold"
+                    : "text-gray-700"
+                }`}
             to="/help"
           >
             How to Help
@@ -80,11 +80,11 @@ const Navbar = () => {
           <>
             <li>
               <NavLink
-                className={({ isActive }) =>
-                  isActive
-                    ? "text-white bg-cyan-600 btn font-bold"
+               className={({ isActive }) =>
+                  `hover:bg-gray-800 hover:rounded hover:text-white hover:px-6 hover:p-2 ${isActive
+                    ? "text-white bg-cyan-600 rounded px-6 p-2  font-bold"
                     : "text-gray-700"
-                }
+                }`}
                 to="/Dashboard"
               >
                 Dashboard
@@ -94,7 +94,7 @@ const Navbar = () => {
         )}
       </ul>
 
-      <div className="relative flex justify-center items-center gap-3">
+      <div className="relative flex justify-between items-center gap-3">
         {user ? (
           <div>
             <button
@@ -163,7 +163,7 @@ const Navbar = () => {
         ) : (
           <Link
             to="/login"
-            className="btn text-yellow-50 bg-cyan-600 font-bold"
+            className="btn py-6 hover:bg-slate-700  text-yellow-50 bg-cyan-600 font-bold"
           >
             Login
           </Link>
@@ -181,23 +181,3 @@ const Navbar = () => {
 };
 
 export default Navbar;
-//  <div className="flex justify-center items-center relative">
-//           {user && user?.email ? (
-//             <button
-//               onClick={() => setOpenUser(!openUser)}
-//               className="w-10 h-10 rounded-full"
-//             >
-//               <img
-//                 className="w-full h-full rounded-full"
-//                 src={user?.photoURL}
-//                 alt=""
-//               />
-//             </button>
-//           ) : (
-//             <button className="text-cyan-600 text-[42px]">
-//               <FaCircleUser></FaCircleUser>
-
-//             </button>
-//           )}
-
-//         </div>

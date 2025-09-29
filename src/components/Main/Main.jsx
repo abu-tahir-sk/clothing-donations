@@ -5,11 +5,13 @@ import Navbar from "../NavBar/Navbar";
 const Main = () => {
   return (
     <div className="flex flex-col min-h-screen">
-      <Navbar />
+      <div>
+        <Navbar />
+      </div>
 
-      <div className="h-32 lg:h-32"></div>
+      
 
-      <main className="flex-1" data-aos="fade-up">
+      <main className="flex-1 mt-[82px]" data-aos="fade-up">
         <Outlet />
       </main>
 

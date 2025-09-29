@@ -36,6 +36,7 @@ const Login = () => {
     if (password.length < 6) {
       newErrors.password = "Password should be 6 characters or longer";
       setErrors(newErrors);
+       e.target.reset();
       return;
     }
 
@@ -55,8 +56,10 @@ const Login = () => {
         navigate("/dashboard");
       })
       .catch((error) => {
-        console.log("ERROR",error)
-        setSuccess(false);
+       newErrors.email = error.message;
+      setErrors(newErrors);
+      setSuccess(false);
+       e.target.reset();
       });
   };
   const handleGoogleSocial = () => {
@@ -64,6 +67,7 @@ const Login = () => {
       .then((result) => {
         setSuccess(true);
         navigate("/");
+       
       })
       .catch((error) => {
         setSuccess(false);
@@ -87,13 +91,12 @@ const Login = () => {
     }
   };
   return (
-    <div className="w-11/12 md:w-10/12 mx-auto">
-      <div className="">
-        <div className="md:bg-gray-200 md:p-8 my-8 flex flex-col md:flex-row items-start gap-0">
-          <div className="w-full md:w-[40%] lg:w-[50%] hidden md:flex flex-col   md:h-screen md:order-last items-center rounded-none">
+    <div className="bg-gray-200 p-4">
+      <div className="grid grid-cols-1 md:grid-cols-12 gap-0 w-11/12  mx-auto my-6">
+       <div className="hidden md:flex flex-col    md:order-last md:col-span-5 items-center rounded-none">
             <img className="w-full h-full" src={login} alt="" />
           </div>
-          <div className="min-h-screen w-full md:w-[60%]  lg:relative flex-1 md:flex items-center card bg-white  shadow-2xl rounded-md md:rounded-none p-4">
+          <div className="lg:relative flex-1 md:flex items-center card bg-white  shadow-2xl rounded-md md:rounded-none p-4 md:col-span-7">
             <div className="">
               <div className="">
                 <div className="text-5xl text-cyan-500 pb-3">
@@ -108,28 +111,28 @@ const Login = () => {
               </div>
               <form onSubmit={handleLoginSubmit} className="form-control">
                 <div className="flex flex-col form-control">
-                  <label className="label py-2">Email</label>
+                  <label className="label py-2 text-xl">Email</label>
                   <input
                     type="email"
                     ref={emailRef}
                     name="email"
-                    className="input input-bordered"
+                    className="input input-bordered w-full"
                     placeholder="Email"
                     required
                   />
                 </div>
                 <div className="form-control flex flex-col relative">
-                  <label className="label">Password</label>
+                  <label className="label text-xl py-2 ">Password</label>
                   <input
                     type={showPassword ? "text" : "password"}
                     name="password"
-                    className="input input-bordered"
+                    className="input w-full input-bordered"
                     placeholder="Password"
                     required
                   />
                   <button
                     onClick={() => setShowPassword(!showPassword)}
-                    className="absolute top-9 right-16"
+                    className="absolute top-14 right-4"
                   >
                     {showPassword ? (
                       <IoEye></IoEye>
@@ -143,7 +146,7 @@ const Login = () => {
                     <input
                       type="checkbox"
                       name="terms"
-                      className="checkbox border-cyan-400 text-cyan-600"
+                      className="checkbox border-cyan-400  text-cyan-600"
                     />
                     <h2 className="text-cyan-600 lg:font-bold">Remember me</h2>
                   </div>
@@ -162,8 +165,8 @@ const Login = () => {
                   <p className="text-red-500 text-center">{errors.email}</p>
                 )}
 
-                <div className="flex flex-col justify-center items-center">
-                  <button className="btn btn-wide mt-4 bg-cyan-600 hover:bg-gray-700 text-white">
+                <div className="flex flex-col justify-center w-full items-center">
+                  <button className="btn w-full mt-4 bg-cyan-600 hover:bg-gray-700 text-white">
                     Login
                   </button>
                 </div>
@@ -172,7 +175,7 @@ const Login = () => {
               <div className="flex flex-col justify-center items-center">
                 <button
                   onClick={handleGoogleSocial}
-                  className="btn btn-wide mt-4 bg-white shadow-2xl hover:bg-gray-700"
+                  className="btn w-full mt-4 bg-white shadow-2xl hover:text-white hover:bg-gray-700"
                 >
                   <img className="w-8 h-8" src={google} alt="" />
                   Google Login
@@ -188,9 +191,8 @@ const Login = () => {
               </div>
             </div>
           </div>
-        </div>
       </div>
-    </div>
+      </div>
   );
 };
 
