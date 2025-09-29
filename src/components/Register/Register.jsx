@@ -1,8 +1,13 @@
 import { useContext, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { AuthContext } from "../AuthProvider/AuthProvider";
-import { IoEye, IoEyeOffSharp } from "react-icons/io5";
+import { IoEye, IoEyeOffSharp, IoKey } from "react-icons/io5";
 import { toast } from "react-toastify";
+import { MdInsertPhoto } from "react-icons/md";
+import { FaUser } from "react-icons/fa6";
+import { IoMdMail } from "react-icons/io";
+import login from "../../assets/image/login.jfif";
+
 
 const Register = () => {
   const { registerHandler, emailVerification, profileUpdate } =
@@ -89,16 +94,19 @@ const Register = () => {
     }
   };
   return (
-    <div className="w-11/12 mx-auto">
-      <div className="bg-cyan-600 p-4 flex flex-col justify-center items-center min-h-screen">
-        <div className="card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl">
+    <div className=" bg-cyan-100 p-4">
+      <div className="grid grid-cols-1 md:grid-cols-12 gap-0 w-11/12 md:w-9/12  mx-auto my-4 rounded">
+       <div className="hidden md:flex flex-col    md:order-last md:col-span-5 items-center  bg-white   shadow-2xl ">
+                <img className="w-full rounded h-full" src={login} alt="" />
+              </div>
+        <div className="lg:relative flex-1 md:flex items-center card bg-white  shadow-2xl rounded-md  p-4 md:col-span-7">
           <h2 className="text-center font-bold text-2xl font-sans py-6">
             Register Account From
           </h2>
           <div className="border-t-2 border-cyan-600 w-20 mx-auto"></div>
           <form onSubmit={handleSubmit} className="card-body">
-            <div className="form-control">
-              <label className="label">
+            <div className="form-control relative">
+              <label className="label py-2 text-xl">
                 <span className="label-text">Name</span>
               </label>
               <input
@@ -108,21 +116,26 @@ const Register = () => {
                 className="border-2 py-4 px-12  w-full  h-12 focus:outline-none  focus:ring-blue-200 focus:border-blue-200"
                 required
               />
+              <button className="absolute  top-[58px] left-4  text-xl cursor-pointer text-gray-500">
+                    <FaUser />
+                  </button>
             </div>
-            <div className="form-control">
-              <label className="label">
-                <span className="label-text">Email</span>
-              </label>
-              <input
-                type="email"
-                placeholder="email"
-                name="email"
-                className="border-2 py-4 px-12  w-full  h-12 focus:outline-none  focus:ring-blue-200 focus:border-blue-200"
-                required
-              />
-            </div>
-            <div className="form-control">
-              <label className="label">
+           <div className="flex flex-col form-control relative">
+                <label className="label py-2 text-xl">Email</label>
+                <input
+                  type="email"
+                  
+                  name="email"
+                  className="border-2 py-4 px-12  w-full  h-12 focus:outline-none  focus:ring-blue-200 focus:border-blue-200"
+                  placeholder="Email"
+                  required
+                />
+                <button className="absolute  top-[58px] left-4  text-xl cursor-pointer text-gray-500">
+                  <IoMdMail />
+                </button>
+              </div>
+            <div className="form-control relative">
+              <label className="label py-2 text-xl">
                 <span className="label-text">Photo URL</span>
               </label>
               <input
@@ -132,29 +145,34 @@ const Register = () => {
                 className="border-2 py-4 px-12  w-full  h-12 focus:outline-none  focus:ring-blue-200 focus:border-blue-200"
                 required
               />
+              <button className="absolute  top-[58px] left-4  text-xl cursor-pointer text-gray-500">
+                    <MdInsertPhoto />
+                  </button>
             </div>
-            <div className="form-control relative">
-              <label className="label">
-                <span className="label-text">Password</span>
-              </label>
-              <input
-                type={showPassword ? "text" : "password"}
-                placeholder="password"
-                name="password"
-                className="border-2 py-4 px-12  w-full  h-12 focus:outline-none  focus:ring-blue-200 focus:border-blue-200"
-                required
-              />
-              <button
-                onClick={() => setShowPassword(!showPassword)}
-                className="absolute  top-10 right-4 -translate-t-12 text-[26px] cursor-pointer "
-              >
-                {showPassword ? (
-                  <IoEye></IoEye>
-                ) : (
-                  <IoEyeOffSharp></IoEyeOffSharp>
-                )}
-              </button>
-            </div>
+            <div className="form-control flex flex-col relative">
+                <label className="label text-xl py-2 ">Password</label>
+
+                <input
+                  type={showPassword ? "text" : "password"}
+                  name="password"
+                  className="border-2 py-4 px-12  w-full  h-12 focus:outline-none  focus:ring-blue-200 focus:border-blue-200"
+                  placeholder="Password"
+                  required
+                />
+                <button
+                  onClick={() => setShowPassword(!showPassword)}
+                  className="absolute  top-14 right-4 -translate-t-12 text-[26px] cursor-pointer "
+                >
+                  {showPassword ? (
+                    <IoEye></IoEye>
+                  ) : (
+                    <IoEyeOffSharp></IoEyeOffSharp>
+                  )}
+                </button>
+                <button className="absolute  top-14 left-4 -translate-t-12 text-xl cursor-pointer text-gray-500">
+                  <IoKey />
+                </button>
+              </div>
             <div className="flex justify-start gap-1">
               <input
                 type="checkbox"
@@ -164,7 +182,7 @@ const Register = () => {
               <h2 className="text-cyan-600 lg:font-bold">Remember me</h2>
             </div>
             <div className="form-control flex flex-col mt-6">
-              <button className="btn btn-primary">Register</button>
+              <button className="btn bg-cyan-600 text-white hover:bg-primary ">Register</button>
             </div>
           </form>
           {errors.terms && (
