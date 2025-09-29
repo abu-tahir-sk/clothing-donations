@@ -1,11 +1,11 @@
 import { Link } from "react-router-dom";
-import footerLogo from "../../assets/image/dontion-removebg-preview (1).png"
+import footerLogo from "../../assets/image/foooter.png"
 
 
 const Footer = () => {
   return (
     <div className="bg-[#121227] text-base-content p-10">
-      <div className="flex justify-center items-center pb-8">
+      <div className="flex justify-center items-center pb-8 gap-4">
             <img src={footerLogo} className="w-16 h-16 " alt="" />
             <h3 className="font-bold text-3xl text-white"><span className="text-cyan-600">CLOTH</span> For All</h3>
       </div>

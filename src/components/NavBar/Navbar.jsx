@@ -35,7 +35,7 @@ const Navbar = () => {
 
       <ul
         className={`flex flex-col lg:lg:flex-row  gap-6 lg:gap-8 justify-start lg:justify-center lg:items-center text-gray-700  
-  p-2  lg:p-0 absolute lg:static duration-1000
+  p-6  lg:p-0 absolute lg:static duration-1000
   ${open ? "right-0 bg-white" : "-right-full"}
    top-[81px] py-3  shadow-2xl lg:shadow-none
   h-[100vh]  md:h-[100vh] w-[70%] md:w-[35%] lg:w-full lg:h-12`}
