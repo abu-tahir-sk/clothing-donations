@@ -1,8 +1,12 @@
 
+import { Helmet } from "react-helmet-async";
 import error from "../../assets/image/982.jpg"
 const ErrorPage = () => {
   return (
     <div className="">
+      <Helmet>
+        <title>404 page not found</title>
+      </Helmet>
       <img className="w-full" src={error} alt="" />
       <div className="">
         <div className="flex absolute top-16 flex-col justify-center items-center text-center py-28">

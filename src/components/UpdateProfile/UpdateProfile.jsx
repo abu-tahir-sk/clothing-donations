@@ -6,7 +6,7 @@ import { FaUser } from "react-icons/fa";
 import camera from "../../assets/image/camera-removebg-preview.png";
 import { Link, useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
-
+import { Helmet } from "react-helmet-async";
 
 const UpdateProfile = () => {
   const { user, profileUpdate } = useContext(AuthContext);
@@ -15,35 +15,35 @@ const UpdateProfile = () => {
     e.preventDefault();
     const username = e.target.username.value;
     const photoURL = e.target.photoURL.value;
-     const profile = {
-    displayName: username,
+    const profile = {
+      displayName: username,
       photoURL: photoURL,
-   }
+    };
     if (!username) {
-      toast.error("⚠️ Please provide a valid email",{
-          position: "top-center",
-          theme: "colored",
-        });
+      toast.error("⚠️ Please provide a valid email", {
+        position: "top-center",
+        theme: "colored",
+      });
       return;
     }
 
     profileUpdate(profile)
       .then((res) => {
-          console.log(res)
         toast.success("✅ Profile Update  successful!", {
           position: "top-center",
           theme: "colored",
-         
         });
         navigate("/dashboard");
       })
       .catch((err) => alert(err.message));
-      console.log(err.message)
   };
 
   return (
     <div className="bg-cyan-50">
       <div className="flex flex-col justify-center items-center py-12 w-11/12 mx-auto ">
+      <Helmet>
+        <title>settings || Cloth For All</title>
+      </Helmet>
         <div className="card bg-base-100 w-96 shadow-xl  p-8">
           <div>
             <h2 className="text-3xl font-bold py-4">Update Your Profile</h2>

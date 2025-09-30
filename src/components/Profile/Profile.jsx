@@ -4,10 +4,14 @@ import { FaPen } from "react-icons/fa";
 
 import camera from "../../assets/image/camera-removebg-preview.png";
 import { Link } from "react-router-dom";
+import { Helmet } from "react-helmet-async";
 const Profile = () => {
   const { user } = useContext(AuthContext);
   return (
     <div className="bg-cyan-50">
+      <Helmet>
+        <title>Profile || Cloth For All</title>
+      </Helmet>
       <div className="flex flex-col justify-center items-center py-12 w-11/12 mx-auto ">
         <div className="card bg-base-100 w-96 shadow-xl  p-8">
           <div>

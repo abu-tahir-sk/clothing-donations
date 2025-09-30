@@ -10,9 +10,10 @@ import {
   updateProfile,
 } from "firebase/auth";
 import { createContext, useEffect, useState } from "react";
-import auth from "../firebase/firebase.config";
+
 import AOS from "aos";
 import "aos/dist/aos.css";
+import auth from "../../firebase.config";
 
 // eslint-disable-next-line react-refresh/only-export-components
 export const AuthContext = createContext(null);

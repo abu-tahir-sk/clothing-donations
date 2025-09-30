@@ -8,6 +8,7 @@ import { IoEye, IoEyeOffSharp } from "react-icons/io5";
 import { toast } from "react-toastify";
 import { IoMdMail } from "react-icons/io";
 import { IoKey } from "react-icons/io5";
+import { Helmet } from "react-helmet-async";
 
 const Login = () => {
   const { loginHandler, handleGoogleLogin, passwordResetEmail } =
@@ -50,7 +51,7 @@ const Login = () => {
         //   setErrors(newErrors);
         //   return;
         // } else {
-        console.log(result);
+        
         setSuccess(true);
         // }
 
@@ -83,6 +84,11 @@ const Login = () => {
  
   return (
     <div className="bg-gray-200 p-4">
+      <Helmet>
+        <title>
+          Login || Cloth For All
+        </title>
+      </Helmet>
       <div className="grid grid-cols-1 md:grid-cols-12 gap-0 w-11/12 md:w-9/12  mx-auto my-4 rounded">
        <div className="hidden md:flex flex-col    md:order-last md:col-span-5 items-center  bg-white   shadow-2xl ">
             <img className="w-full rounded h-full" src={login} alt="" />

@@ -34,13 +34,13 @@ const router = createBrowserRouter([
           </PrivateRouts>
         ),
         loader: async ({ params }) => {
-          console.log(params);
+          
           const res = await fetch("/campaigns.json");
           const data = await res.json();
           const singleData = data.find(
             (item) => item.id === parseInt(params.id)
           );
-          console.log(singleData);
+         
           return singleData;
         },
       },

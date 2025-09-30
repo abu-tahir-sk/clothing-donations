@@ -25,9 +25,9 @@ const Navbar = () => {
   };
 
   return (
-    <div className="flex justify-between items-center  p-4 lg:px-10 shadow-sm fixed top-0 left-0 w-full bg-white z-50">
-      <div className="md:flex gap-2 justify-center items-center">
-        <img className="w-12 h-12" src={logo} alt="" />
+    <div className="flex  justify-between items-center  p-4 lg:px-10 shadow-sm fixed top-0 left-0 w-full bg-white z-50">
+      <div className="flex gap-2 justify-start  items-center  w-12  h-12 md:h-full">
+        <img className="w-12 lg:h-12 " src={logo} alt="" />
         <h2 className="font-extrabold text-2xl">
           <span className="text-cyan-600 md:text-wrap">CLOTH</span> For All
         </h2>
@@ -56,7 +56,7 @@ const Navbar = () => {
           <NavLink
             className={({ isActive }) =>
                   `hover:bg-gray-800 hover:rounded hover:text-white hover:px-6 hover:p-2 ${isActive
-                    ? "text-white bg-cyan-600 rounded px-6 p-2  font-bold"
+                    ? "text-white bg-cyan-600 rounded px-3 md:px-6 p-2  font-bold"
                     : "text-gray-700"
                 }`}
             to="/campaigns"

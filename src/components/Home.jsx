@@ -1,13 +1,19 @@
-import { FaGetPocket } from "react-icons/fa";
+
 import About from "./About/About";
 import Banner from "./Banner/Banner";
 import Testimonials from "./Testimonials/Testimonials";
 import Works from "./Works/Works";
 import GetInvolve from "./Getinvolv/GetInvolve";
+import { Helmet } from "react-helmet-async";
+
 
 const Home = () => {
   return (
     <div>
+      <Helmet>
+        <title>COTH For All || Home</title>
+      </Helmet>
+   
       <div data-aos="animation_name">
         <Banner></Banner>
       </div>

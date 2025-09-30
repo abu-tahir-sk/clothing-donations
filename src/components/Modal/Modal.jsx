@@ -1,10 +1,16 @@
 import { AnimatePresence, motion } from "framer-motion";
 
 import { Check } from "lucide-react";
+import { Helmet } from "react-helmet-async";
 
 const Modal = ({  setIsOpen }) => {
   return (
     <div className=" flex justify-center items-center bg-gray-100">
+      <Helmet>
+        <title>
+          Success donate || Cloth For All 
+        </title>
+      </Helmet>
       <AnimatePresence>
        
           <motion.div

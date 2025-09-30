@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
-import { Link, } from "react-router-dom";
+import { Link } from "react-router-dom";
+import Reveal from "../../animation/Reveal";
 
 const Works = () => {
   const [works, setWorks] = useState([]);
@@ -9,21 +10,27 @@ const Works = () => {
       .then((data) => setWorks(data));
   }, []);
   return (
-    <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-8 my-12 p-4 bg-gray-50">
-    
+    <Reveal>
+      <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-8 my-12 p-4 bg-gray-50">
         {works.map((work) => (
           <div
-            className="overflow-hidden transform transition duration-300 hover:scale-105 hover:shadow-2xl flex flex-col gap-3 text-center items-center p-6 bg-white rounded-xl shadow-md"
+            className="overflow-hidden transform transition duration-300 hover:scale-105 hover:shadow-2xl flex flex-col gap-3 text-center items-center p-6 bg-white h-full rounded-xl shadow-md"
             key={work.__id}
-          >  <Link to="/help">
-            <img className="w-16 h-16 hover:scale-105" src={work.icon} alt="" />
+          >
+            {" "}
+            <Link to="/help">
+              <img
+                className="w-16 h-16 hover:scale-105"
+                src={work.icon}
+                alt=""
+              />
             </Link>
             <h5 className=" font-bold">{work.title}</h5>
             <p className="text-gray-600">{work.description}</p>
           </div>
         ))}
-      
-    </div>
+      </div>
+    </Reveal>
   );
 };
 

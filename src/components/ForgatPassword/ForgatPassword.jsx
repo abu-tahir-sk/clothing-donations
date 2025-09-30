@@ -4,6 +4,7 @@ import { AuthContext } from "../AuthProvider/AuthProvider";
 import { IoMdMail } from "react-icons/io";
 import { useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
+import { Helmet } from "react-helmet-async";
 
 const ForgatPassword = () => {
   const { passwordResetEmail } = useContext(AuthContext);
@@ -33,6 +34,9 @@ const ForgatPassword = () => {
   };
   return (
     <div className="flex flex-col justify-center items-center py-12 w-11/12 mx-auto bg-cyan-50">
+      <Helmet>
+              <title>Forgat Password || Cloth For All</title>
+            </Helmet>
       <div className="card bg-base-100 w-96 shadow-xl  p-8">
         <div>
           <h2 className="text-3xl font-bold py-4">Forgot Password</h2>

@@ -7,6 +7,7 @@ import { MdInsertPhoto } from "react-icons/md";
 import { FaUser } from "react-icons/fa6";
 import { IoMdMail } from "react-icons/io";
 import login from "../../assets/image/login.jfif";
+import { Helmet } from "react-helmet-async";
 
 const Register = () => {
   const { registerHandler, emailVerification, profileUpdate } =
@@ -62,7 +63,7 @@ const Register = () => {
       registerHandler(email, password)
         .then((result) => {
           login("user@example.com");
-          console.log(result);
+        
 
           emailVerification().then(() => {
             // if (!result.user.emailVerified) {
@@ -91,6 +92,9 @@ const Register = () => {
   };
   return (
     <div className=" bg-cyan-100 p-4">
+      <Helmet>
+        <title>Register || Cloth For All</title>
+      </Helmet>
       <div className="grid grid-cols-1 md:grid-cols-12 gap-0 w-11/12 md:w-9/12  mx-auto my-4 rounded">
         <div className="hidden md:flex flex-col    md:order-last md:col-span-5 items-center  bg-white   shadow-2xl ">
           <img className="w-full rounded h-full" src={login} alt="" />

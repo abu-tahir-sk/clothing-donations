@@ -2,6 +2,7 @@ import { useLoaderData } from "react-router-dom";
 
 import Modal from "../Modal/Modal";
 import { useState } from "react";
+import { Helmet } from "react-helmet-async";
 
 const Details = () => {
   const details = useLoaderData();
@@ -40,6 +41,9 @@ const Details = () => {
 
   return (
     <div className="bg-gray-200 p-4">
+      <Helmet>
+        <title>Details || Cloth For All</title>
+      </Helmet>
       <div className="grid grid-cols-1 md:grid-cols-12 gap-6 w-11/12  mx-auto my-6">
         <div className="card flex flex-col justify-center items-center bg-base-100 md:col-span-5 shadow-xl h-full">
           <figure>
