@@ -1,6 +1,6 @@
 # CLOTH For All
 
-## https://kaleidoscopic-dieffenbachia-6e1318.netlify.app/
+## [https://kaleidoscopic-dieffenbachia-6e1318.netlify.app/](https://clothing-dontion.netlify.app/)
 
 ### purpose:
 
